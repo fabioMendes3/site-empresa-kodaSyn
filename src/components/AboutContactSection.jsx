@@ -4,9 +4,9 @@ import emailjs from "@emailjs/browser";
 import logoMasc from "../assets/log+masc.png";
 
 const emailJsConfig = {
-  serviceId: "service_p1g17je",
-  templateId: "template_3g6ofd3",
-  publicKey: "elc9gw6KzUooPtDkZ",
+  serviceId: "",
+  templateId: "",
+  publicKey: "Z",
 };
 
 const contactItems = [
