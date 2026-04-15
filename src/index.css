@@ -13,14 +13,21 @@ body {
 
 @media (min-width: 1024px) and (max-height: 820px) {
   .desktop-section-fit {
-    transform: scale(0.9);
+    height: calc(100% / 0.9);
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
     transform-origin: center;
+    width: calc(100% / 0.9);
   }
 }
 
 @media (min-width: 1024px) and (max-height: 720px) {
   .desktop-section-fit {
-    transform: scale(0.84);
+    height: calc(100% / 0.84);
+    transform: translate(-50%, -50%) scale(0.84);
+    width: calc(100% / 0.84);
   }
 }
 
