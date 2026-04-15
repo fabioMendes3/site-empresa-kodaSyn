@@ -6,7 +6,7 @@ function Navbar({ activeSection = 0, transitionKey = 0, onNavigate }) {
 
   return (
     <header className="absolute top-0 left-0 z-50 w-full">
-      <div className="mx-auto flex max-w-[1880px] items-center justify-between px-6 pr-10 pt-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 pt-4 md:px-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={transitionKey}
@@ -32,7 +32,7 @@ function Navbar({ activeSection = 0, transitionKey = 0, onNavigate }) {
                   scale: isExperience ? 1.015 : 1,
                 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="h-[100px] w-auto object-contain sm:h-[120px] md:h-[140px]"
+                className="h-[78px] w-auto object-contain sm:h-[92px] md:h-[104px] xl:h-[116px]"
               />
             </motion.button>
 
@@ -51,7 +51,7 @@ function Navbar({ activeSection = 0, transitionKey = 0, onNavigate }) {
                 scale: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
                 boxShadow: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
               }}
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-cyan-300/45 bg-cyan-400 px-7 py-3 text-sm font-bold text-black transition duration-300 hover:shadow-[0_0_36px_rgba(34,211,238,0.42)] sm:px-8 sm:py-3.5 sm:text-base"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-cyan-300/45 bg-cyan-400 px-5 py-2.5 text-xs font-bold text-black transition duration-300 hover:shadow-[0_0_36px_rgba(34,211,238,0.42)] sm:px-6 sm:py-3 sm:text-sm"
             >
               <span className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.35),transparent_60%)] opacity-0 transition duration-300 group-hover:opacity-100" />
               <span className="absolute -inset-[1px] rounded-full border border-white/20 opacity-60" />

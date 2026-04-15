@@ -89,7 +89,7 @@ function ServicesSection() {
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[82px] w-[164px] object-contain md:h-[200px] md:w-[400px]"
+          className="h-[82px] w-[164px] object-contain md:h-[132px] md:w-[264px] xl:h-[150px] xl:w-[300px]"
           draggable={false}
         />
       </div>
@@ -103,9 +103,9 @@ function ServicesSection() {
 
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(17,147,230,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(17,147,230,0.035)_1px,transparent_1px)] bg-[size:90px_90px] opacity-20" />
 
-      <div className="relative z-20 mx-auto flex h-full max-w-[1880px] flex-col px-4 md:px-6">
+      <div className="relative z-20 mx-auto flex h-full max-w-7xl flex-col px-4 md:px-8">
         <div className="pt-1 text-center">
-          <h2 className="mx-auto mt-2 max-w-[760px] text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-5xl">
+          <h2 className="mx-auto mt-2 max-w-[680px] text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[42px] xl:text-5xl">
             serviços e soluções
             <span className="block text-[#A9E4FF]/70">
               para a sua empresa
@@ -116,7 +116,7 @@ function ServicesSection() {
         <div className="relative flex flex-1 items-center justify-center pt-3 md:pt-6">
           <motion.div
             animate={{ opacity: 0.4, scale: 1 }}
-            className="absolute left-[10%] hidden w-[190px] rounded-[20px] border border-[#1193E6]/10 bg-[#1193E6]/[0.04] p-4 backdrop-blur-md xl:block"
+            className="absolute left-[2%] hidden w-[170px] rounded-[18px] border border-[#1193E6]/10 bg-[#1193E6]/[0.04] p-4 backdrop-blur-md xl:block"
             style={{
               boxShadow:
                 "0 0 22px rgba(17,147,230,0.08), inset 0 0 12px rgba(17,147,230,0.04)",
@@ -133,7 +133,7 @@ function ServicesSection() {
             </p>
           </motion.div>
 
-          <div className="relative mx-auto flex w-full max-w-[960px] items-center justify-center">
+          <div className="relative mx-auto flex w-full max-w-[860px] items-center justify-center">
             <button
               type="button"
               onClick={goPrev}
@@ -176,7 +176,7 @@ function ServicesSection() {
                     duration: 0.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="relative overflow-hidden rounded-[18px] border border-[#1193E6]/16 bg-[#1193E6]/[0.05] px-3.5 py-3.5 backdrop-blur-xl md:rounded-[28px] md:px-6 md:py-6"
+                  className="relative overflow-hidden rounded-[18px] border border-[#1193E6]/16 bg-[#1193E6]/[0.05] px-3.5 py-3.5 backdrop-blur-xl md:rounded-[24px] md:px-5 md:py-5"
                   style={{
                     boxShadow:
                       "0 0 50px rgba(17,147,230,0.10), inset 0 0 20px rgba(17,147,230,0.05)",
@@ -184,17 +184,17 @@ function ServicesSection() {
                 >
                   <div className="absolute right-6 top-6 h-24 w-24 rounded-full bg-[#1193E6]/10 blur-3xl" />
 
-                  <div className="relative z-10 grid items-stretch gap-3 md:min-h-[285px] md:grid-cols-[0.9fr_1.1fr] md:gap-5">
+                  <div className="relative z-10 grid items-stretch gap-3 md:min-h-[250px] md:grid-cols-[0.9fr_1.1fr] md:gap-5">
                     <div className="order-2 flex flex-col justify-center md:order-1">
                       <span className="inline-flex w-fit rounded-full border border-[#25B7F3]/20 bg-[#1193E6]/10 px-2.5 py-1 text-[9px] uppercase tracking-[0.22em] text-[#A9E4FF]/70 md:px-3 md:py-1.5 md:text-[11px] md:tracking-[0.28em]">
                         {activeService.tag}
                       </span>
 
-                      <h3 className="mt-2 text-[1.55rem] font-semibold leading-tight text-white sm:text-[1.85rem] md:mt-3 md:text-[2.5rem]">
+                      <h3 className="mt-2 text-[1.55rem] font-semibold leading-tight text-white sm:text-[1.85rem] md:mt-3 md:text-[2.1rem]">
                         {activeService.title}
                       </h3>
 
-                      <p className="mt-2 text-[13px] leading-5 text-cyan-50/75 sm:text-sm md:mt-3 md:text-base md:leading-7">
+                      <p className="mt-2 text-[13px] leading-5 text-cyan-50/75 sm:text-sm md:mt-3 md:text-[15px] md:leading-6">
                         {activeService.description}
                       </p>
 
@@ -211,7 +211,7 @@ function ServicesSection() {
                     </div>
 
                     <div className="order-1 flex h-full items-stretch justify-center md:order-2 md:justify-end">
-                      <div className="relative h-[132px] w-full overflow-hidden rounded-[16px] border border-[#1193E6]/18 bg-[#1193E6]/[0.06] shadow-[0_0_24px_rgba(17,147,230,0.14)] sm:h-[160px] md:h-full md:min-h-[285px] md:rounded-[22px]">
+                      <div className="relative h-[132px] w-full overflow-hidden rounded-[16px] border border-[#1193E6]/18 bg-[#1193E6]/[0.06] shadow-[0_0_24px_rgba(17,147,230,0.14)] sm:h-[160px] md:h-full md:min-h-[250px] md:rounded-[22px]">
                         <img
                           src={activeService.image}
                           alt={activeService.title}
@@ -245,7 +245,7 @@ function ServicesSection() {
 
           <motion.div
             animate={{ opacity: 0.4, scale: 1 }}
-            className="absolute right-[10%] hidden w-[190px] rounded-[20px] border border-[#1193E6]/10 bg-[#1193E6]/[0.04] p-4 backdrop-blur-md xl:block"
+            className="absolute right-[2%] hidden w-[170px] rounded-[18px] border border-[#1193E6]/10 bg-[#1193E6]/[0.04] p-4 backdrop-blur-md xl:block"
             style={{
               boxShadow:
                 "0 0 22px rgba(17,147,230,0.08), inset 0 0 12px rgba(17,147,230,0.04)",

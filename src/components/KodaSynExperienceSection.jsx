@@ -170,12 +170,12 @@ const iconNodes = [
 ];
 
 const orbitItems = [
-  { id: 1, text: "Websites", angle: 0, distance: 235 },
-  { id: 2, text: "Sistemas", angle: 60, distance: 245 },
-  { id: 3, text: "UX / UI", angle: 120, distance: 225 },
-  { id: 4, text: "Automação", angle: 180, distance: 240 },
-  { id: 5, text: "Escala", angle: 240, distance: 245 },
-  { id: 6, text: "Performance", angle: 300, distance: 230 },
+  { id: 1, text: "Websites", angle: 0, distance: 190 },
+  { id: 2, text: "Sistemas", angle: 60, distance: 198 },
+  { id: 3, text: "UX / UI", angle: 120, distance: 184 },
+  { id: 4, text: "Automação", angle: 180, distance: 194 },
+  { id: 5, text: "Escala", angle: 240, distance: 198 },
+  { id: 6, text: "Performance", angle: 300, distance: 188 },
 ];
 
 function KodaSynExperienceSection() {
@@ -204,15 +204,15 @@ function KodaSynExperienceSection() {
     <section
       id="experience"
       onMouseMove={handleMouseMove}
-      className="relative h-screen overflow-hidden bg-black pt-24"
+      className="relative h-screen overflow-hidden bg-black pt-20 md:pt-24"
     >
       <div className="absolute inset-0 bg-black" />
 
-      <div className="absolute left-6 top-6 z-30 md:left-8 md:top-8">
+      <div className="absolute left-3 top-3 z-30 md:left-8 md:top-8">
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[200px] w-[400px] object-contain"
+          className="h-[82px] w-[164px] object-contain md:h-[132px] md:w-[264px] xl:h-[150px] xl:w-[300px]"
           draggable={false}
         />
       </div>
@@ -283,7 +283,7 @@ function KodaSynExperienceSection() {
         })}
       </div>
 
-      <div className="relative z-20 mx-auto h-full max-w-[1880px] px-6">
+      <div className="relative z-20 mx-auto h-full max-w-7xl px-5 md:px-8">
         <div className="flex h-full items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.96 }}
@@ -294,16 +294,16 @@ function KodaSynExperienceSection() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[480px] w-[480px] rounded-full border border-[#1193E6]/12"
+              className="absolute h-[360px] w-[360px] rounded-full border border-[#1193E6]/12 lg:h-[410px] lg:w-[410px]"
             />
 
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[590px] w-[590px] rounded-full border border-[#0A4FB3]/12"
+              className="absolute h-[450px] w-[450px] rounded-full border border-[#0A4FB3]/12 lg:h-[500px] lg:w-[500px]"
             />
 
-            <div className="absolute h-[700px] w-[700px] rounded-full border border-[#1193E6]/[0.05]" />
+            <div className="absolute h-[540px] w-[540px] rounded-full border border-[#1193E6]/[0.05] lg:h-[590px] lg:w-[590px]" />
 
             {orbitItems.map((item, index) => {
               const angleRad = (item.angle * Math.PI) / 180;
@@ -322,7 +322,7 @@ function KodaSynExperienceSection() {
                   }}
                 >
                   <div
-                    className="rounded-full border border-[#1193E6]/20 bg-[#1193E6]/[0.05] px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-[#CDEFFF]/80 backdrop-blur-md"
+                    className="rounded-full border border-[#1193E6]/20 bg-[#1193E6]/[0.05] px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-[#CDEFFF]/80 backdrop-blur-md"
                     style={{
                       boxShadow:
                         "0 0 28px rgba(17,147,230,0.10), inset 0 0 14px rgba(17,147,230,0.04)",
@@ -338,7 +338,7 @@ function KodaSynExperienceSection() {
               initial={{ opacity: 0, y: 35, scale: 0.92 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.95, delay: 0.22 }}
-              className="relative z-30 w-full max-w-[760px] rounded-[38px] border border-[#1193E6]/16 bg-[#1193E6]/[0.04] px-8 py-10 text-center backdrop-blur-xl md:px-12 md:py-14"
+              className="relative z-30 w-full max-w-[640px] rounded-[28px] border border-[#1193E6]/16 bg-[#1193E6]/[0.04] px-6 py-8 text-center backdrop-blur-xl md:px-9 md:py-10"
               style={{
                 boxShadow:
                   "0 0 70px rgba(17,147,230,0.10), inset 0 0 30px rgba(17,147,230,0.05)",
@@ -354,21 +354,21 @@ function KodaSynExperienceSection() {
                 </span>
               </div>
 
-              <h2 className="mx-auto max-w-[620px] text-3xl font-semibold leading-[1.15] text-white sm:text-4xl md:text-[54px]">
+              <h2 className="mx-auto max-w-[560px] text-3xl font-semibold leading-[1.15] text-white sm:text-4xl md:text-[42px] xl:text-[46px]">
                 Tecnologia que não apenas aparece,
                 <span className="block text-[#A9E4FF]/70">
                   mas se move, conecta e performa.
                 </span>
               </h2>
 
-              <p className="mx-auto mt-7 max-w-[620px] text-sm leading-8 text-cyan-50/70 md:text-lg">
+              <p className="mx-auto mt-5 max-w-[560px] text-sm leading-7 text-cyan-50/70 md:text-base">
                 A KodaSyn desenvolve experiências digitais com presença visual,
                 inteligência estrutural e acabamento moderno. Cada projeto é
                 pensado para transmitir valor, fortalecer a marca e transformar
                 tecnologia em resultado real.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
                 <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-2 text-[11px] uppercase tracking-[0.24em] text-[#D6F3FF]/70 md:text-xs">
                   Design estratégico
                 </div>
@@ -382,7 +382,7 @@ function KodaSynExperienceSection() {
                 </div>
               </div>
 
-              <div className="mt-10 flex items-center justify-center">
+              <div className="mt-7 flex items-center justify-center">
                 <div className="flex items-center gap-3 rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-5 py-3 text-sm text-[#D6F3FF]/65">
                   <SparklesIcon className="h-4 w-4" />
                   Role para continuar explorando

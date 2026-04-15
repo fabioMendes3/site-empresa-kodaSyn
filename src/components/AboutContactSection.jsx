@@ -148,7 +148,7 @@ function ContactSection() {
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[82px] w-[164px] object-contain md:h-[200px] md:w-[400px]"
+          className="h-[82px] w-[164px] object-contain md:h-[132px] md:w-[264px] xl:h-[150px] xl:w-[300px]"
           draggable={false}
         />
       </div>
@@ -161,7 +161,7 @@ function ContactSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,183,243,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,183,243,0.04)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-4 pb-4 pt-14 md:px-8 md:pb-6 md:pt-20">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-4 pb-4 pt-14 md:px-8 md:pb-6 md:pt-[4.5rem]">
         <div className="flex-1">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -174,7 +174,7 @@ function ContactSection() {
               contato
             </span>
 
-            <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:mt-4 md:text-[3.2rem]">
+            <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:mt-4 md:text-[2.6rem] xl:text-[3rem]">
               fale com a KodaSyn
               <span className="block text-cyan-200/80">
                 e tire seu projeto do papel
@@ -182,7 +182,7 @@ function ContactSection() {
             </h2>
           </motion.div>
 
-          <div className="mt-4 grid gap-4 lg:grid-cols-[0.78fr_1.22fr] md:mt-7">
+          <div className="mt-4 grid gap-4 lg:grid-cols-[0.74fr_1.26fr] md:mt-6">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
