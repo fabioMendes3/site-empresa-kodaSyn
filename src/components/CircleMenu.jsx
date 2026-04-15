@@ -6,10 +6,10 @@ import {
 } from "framer-motion";
 import { useMemo, useState } from "react";
 
-const MENU_SIZE = 280;
-const CENTER_BUTTON_SIZE = 74;
-const ITEM_SIZE = 58;
-const RADIUS = 98;
+const MENU_SIZE = 220;
+const CENTER_BUTTON_SIZE = 62;
+const ITEM_SIZE = 48;
+const RADIUS = 76;
 
 const menuItems = [
   {
@@ -223,12 +223,12 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
         onMouseLeave={handleMouseLeave}
       >
       <motion.div
-        className="absolute left-1/2 top-1/2 z-0 h-[140px] w-[140px] rounded-full bg-cyan-400/10 blur-3xl"
+        className="absolute left-1/2 top-1/2 z-0 h-[110px] w-[110px] rounded-full bg-cyan-400/10 blur-3xl"
         style={{
           x: glowX,
           y: glowY,
-          marginLeft: -70,
-          marginTop: -70,
+          marginLeft: -55,
+          marginTop: -55,
         }}
       />
 
@@ -241,10 +241,10 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           className="pointer-events-none absolute left-1/2 top-1/2 z-0 rounded-full border border-cyan-300/30"
           style={{
-            width: 172,
-            height: 172,
-            marginLeft: -86,
-            marginTop: -86,
+            width: 136,
+            height: 136,
+            marginLeft: -68,
+            marginTop: -68,
           }}
         />
       </AnimatePresence>
@@ -257,10 +257,10 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         className="absolute left-1/2 top-1/2 z-0 rounded-full border border-cyan-400/18"
         style={{
-          width: 188,
-          height: 188,
-          marginLeft: -94,
-          marginTop: -94,
+          width: 148,
+          height: 148,
+          marginLeft: -74,
+          marginTop: -74,
           boxShadow:
             "0 0 24px rgba(34,211,238,0.08), inset 0 0 22px rgba(34,211,238,0.05)",
         }}
@@ -271,10 +271,10 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
         className="absolute left-1/2 top-1/2 z-0 rounded-full border-t border-cyan-300/25 border-r border-transparent border-b border-transparent border-l border-transparent"
         style={{
-          width: 216,
-          height: 216,
-          marginLeft: -108,
-          marginTop: -108,
+          width: 172,
+          height: 172,
+          marginLeft: -86,
+          marginTop: -86,
         }}
       />
 
@@ -285,10 +285,10 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
           animate={{ opacity: 0.42, scale: 1.1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[90px] w-[90px] rounded-full bg-cyan-400/10 blur-md"
+          className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[74px] w-[74px] rounded-full bg-cyan-400/10 blur-md"
           style={{
-            marginLeft: -45,
-            marginTop: -45,
+            marginLeft: -37,
+            marginTop: -37,
           }}
         />
       </AnimatePresence>
@@ -302,10 +302,10 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
               : "0 0 14px rgba(34,211,238,0.08)",
         }}
         transition={{ duration: 0.4 }}
-        className="absolute left-1/2 top-1/2 z-0 h-[90px] w-[90px] rounded-full border border-cyan-300/20 bg-cyan-400/[0.06] blur-md"
+        className="absolute left-1/2 top-1/2 z-0 h-[74px] w-[74px] rounded-full border border-cyan-300/20 bg-cyan-400/[0.06] blur-md"
         style={{
-          marginLeft: -45,
-          marginTop: -45,
+          marginLeft: -37,
+          marginTop: -37,
         }}
       />
 
@@ -324,7 +324,7 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
                 transition={{ duration: 0.22, delay: index * 0.04 }}
                 className="absolute left-1/2 top-1/2 z-10 h-[1px] origin-left bg-gradient-to-r from-cyan-300/40 to-transparent"
                 style={{
-                  width: `${length - 54}px`,
+                  width: `${length - 42}px`,
                   transform: `translate(0, -50%) rotate(${angle}deg)`,
                 }}
               />
@@ -372,7 +372,7 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
                         : "rgba(34,211,238,0.4)",
                     }}
                     transition={{ duration: 0.35 }}
-                    className={`flex h-[58px] w-[58px] items-center justify-center rounded-full border backdrop-blur-md transition duration-300 hover:scale-110 [&_svg]:h-5 [&_svg]:w-5 ${isActive
+                    className={`flex h-12 w-12 items-center justify-center rounded-full border backdrop-blur-md transition duration-300 hover:scale-110 [&_svg]:h-4 [&_svg]:w-4 ${isActive
                       ? "bg-cyan-400/20 text-cyan-100"
                       : "bg-[#07111d]/95 text-cyan-200 hover:border-cyan-300 hover:text-cyan-100 hover:shadow-[0_0_34px_rgba(34,211,238,0.26)]"
                       }`}
@@ -386,7 +386,7 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
                       y: isActive ? -1 : 0,
                     }}
                     transition={{ duration: 0.3 }}
-                    className={`mt-2 text-[11px] font-semibold tracking-[0.06em] ${isActive ? "text-cyan-200" : "text-white/95"
+                    className={`mt-1.5 text-[10px] font-semibold tracking-[0.04em] ${isActive ? "text-cyan-200" : "text-white/95"
                       }`}
                     style={{ fontFamily: "var(--font-tech)" }}
                   >
@@ -421,12 +421,12 @@ function CircleMenu({ activeSection = 0, transitionKey = 0, onNavigate }) {
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.28 }}
-          className="text-[22px] leading-none"
+          className="text-[19px] leading-none"
         >
           {isOpen ? "×" : "☰"}
         </motion.span>
 
-        <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.12em] text-black/90">
+        <span className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.1em] text-black/90">
           Menu
         </span>
       </motion.button>

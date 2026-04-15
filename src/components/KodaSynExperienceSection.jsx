@@ -170,12 +170,12 @@ const iconNodes = [
 ];
 
 const orbitItems = [
-  { id: 1, text: "Websites", angle: 0, distance: 190 },
-  { id: 2, text: "Sistemas", angle: 60, distance: 198 },
-  { id: 3, text: "UX / UI", angle: 120, distance: 184 },
-  { id: 4, text: "Automação", angle: 180, distance: 194 },
-  { id: 5, text: "Escala", angle: 240, distance: 198 },
-  { id: 6, text: "Performance", angle: 300, distance: 188 },
+  { id: 1, text: "Websites", angle: 0, distance: 154 },
+  { id: 2, text: "Sistemas", angle: 60, distance: 162 },
+  { id: 3, text: "UX / UI", angle: 120, distance: 150 },
+  { id: 4, text: "Automação", angle: 180, distance: 158 },
+  { id: 5, text: "Escala", angle: 240, distance: 162 },
+  { id: 6, text: "Performance", angle: 300, distance: 154 },
 ];
 
 function KodaSynExperienceSection() {
@@ -204,7 +204,7 @@ function KodaSynExperienceSection() {
     <section
       id="experience"
       onMouseMove={handleMouseMove}
-      className="relative h-screen overflow-hidden bg-black pt-20 md:pt-24"
+      className="relative h-screen overflow-hidden bg-black pt-14 md:pt-16"
     >
       <div className="absolute inset-0 bg-black" />
 
@@ -212,7 +212,7 @@ function KodaSynExperienceSection() {
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[82px] w-[164px] object-contain md:h-[132px] md:w-[264px] xl:h-[150px] xl:w-[300px]"
+          className="h-[70px] w-[140px] object-contain md:h-[96px] md:w-[192px] xl:h-[108px] xl:w-[216px]"
           draggable={false}
         />
       </div>
@@ -283,7 +283,7 @@ function KodaSynExperienceSection() {
         })}
       </div>
 
-      <div className="relative z-20 mx-auto h-full max-w-7xl px-5 md:px-8">
+      <div className="relative z-20 mx-auto h-full max-w-6xl px-5 md:px-8">
         <div className="flex h-full items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.96 }}
@@ -294,16 +294,16 @@ function KodaSynExperienceSection() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[360px] w-[360px] rounded-full border border-[#1193E6]/12 lg:h-[410px] lg:w-[410px]"
+              className="absolute h-[280px] w-[280px] rounded-full border border-[#1193E6]/12 lg:h-[330px] lg:w-[330px]"
             />
 
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
-              className="absolute h-[450px] w-[450px] rounded-full border border-[#0A4FB3]/12 lg:h-[500px] lg:w-[500px]"
+              className="absolute h-[350px] w-[350px] rounded-full border border-[#0A4FB3]/12 lg:h-[400px] lg:w-[400px]"
             />
 
-            <div className="absolute h-[540px] w-[540px] rounded-full border border-[#1193E6]/[0.05] lg:h-[590px] lg:w-[590px]" />
+            <div className="absolute h-[420px] w-[420px] rounded-full border border-[#1193E6]/[0.05] lg:h-[470px] lg:w-[470px]" />
 
             {orbitItems.map((item, index) => {
               const angleRad = (item.angle * Math.PI) / 180;
@@ -316,13 +316,13 @@ function KodaSynExperienceSection() {
                   initial={{ opacity: 0, scale: 0.78 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 0.2 + index * 0.08 }}
-                  className="absolute"
+                  className="absolute hidden xl:block"
                   style={{
                     transform: `translate(${x}px, ${y}px)`,
                   }}
                 >
                   <div
-                    className="rounded-full border border-[#1193E6]/20 bg-[#1193E6]/[0.05] px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-[#CDEFFF]/80 backdrop-blur-md"
+                    className="rounded-full border border-[#1193E6]/20 bg-[#1193E6]/[0.05] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#CDEFFF]/80 backdrop-blur-md"
                     style={{
                       boxShadow:
                         "0 0 28px rgba(17,147,230,0.10), inset 0 0 14px rgba(17,147,230,0.04)",
@@ -338,52 +338,52 @@ function KodaSynExperienceSection() {
               initial={{ opacity: 0, y: 35, scale: 0.92 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.95, delay: 0.22 }}
-              className="relative z-30 w-full max-w-[640px] rounded-[28px] border border-[#1193E6]/16 bg-[#1193E6]/[0.04] px-6 py-8 text-center backdrop-blur-xl md:px-9 md:py-10"
+              className="relative z-30 w-full max-w-[540px] rounded-[22px] border border-[#1193E6]/16 bg-[#1193E6]/[0.04] px-5 py-6 text-center backdrop-blur-xl md:px-7 md:py-7"
               style={{
                 boxShadow:
                   "0 0 70px rgba(17,147,230,0.10), inset 0 0 30px rgba(17,147,230,0.05)",
               }}
             >
-              <div className="mb-6 flex items-center justify-center gap-3">
-                <div className="rounded-full border border-[#25B7F3]/20 bg-[#1193E6]/[0.10] p-3">
-                  <SparklesIcon className="h-5 w-5 text-[#9EE4FF]/80" />
+              <div className="mb-4 flex items-center justify-center gap-2.5">
+                <div className="rounded-full border border-[#25B7F3]/20 bg-[#1193E6]/[0.10] p-2.5">
+                  <SparklesIcon className="h-4 w-4 text-[#9EE4FF]/80" />
                 </div>
 
-                <span className="text-[11px] font-semibold uppercase tracking-[0.38em] text-[#A9E4FF]/60 md:text-xs">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#A9E4FF]/60 md:text-[11px]">
                   Ecossistema KodaSyn
                 </span>
               </div>
 
-              <h2 className="mx-auto max-w-[560px] text-3xl font-semibold leading-[1.15] text-white sm:text-4xl md:text-[42px] xl:text-[46px]">
+              <h2 className="mx-auto max-w-[500px] text-2xl font-semibold leading-[1.12] text-white sm:text-3xl md:text-[34px] xl:text-[38px]">
                 Tecnologia que não apenas aparece,
                 <span className="block text-[#A9E4FF]/70">
                   mas se move, conecta e performa.
                 </span>
               </h2>
 
-              <p className="mx-auto mt-5 max-w-[560px] text-sm leading-7 text-cyan-50/70 md:text-base">
+              <p className="mx-auto mt-4 max-w-[500px] text-[13px] leading-6 text-cyan-50/70 md:text-[15px]">
                 A KodaSyn desenvolve experiências digitais com presença visual,
                 inteligência estrutural e acabamento moderno. Cada projeto é
                 pensado para transmitir valor, fortalecer a marca e transformar
                 tecnologia em resultado real.
               </p>
 
-              <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
-                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-2 text-[11px] uppercase tracking-[0.24em] text-[#D6F3FF]/70 md:text-xs">
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.16em] text-[#D6F3FF]/70 md:text-[11px]">
                   Design estratégico
                 </div>
 
-                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-2 text-[11px] uppercase tracking-[0.24em] text-[#D6F3FF]/70 md:text-xs">
+                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.16em] text-[#D6F3FF]/70 md:text-[11px]">
                   Arquitetura moderna
                 </div>
 
-                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-2 text-[11px] uppercase tracking-[0.24em] text-[#D6F3FF]/70 md:text-xs">
+                <div className="rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.16em] text-[#D6F3FF]/70 md:text-[11px]">
                   Presença premium
                 </div>
               </div>
 
-              <div className="mt-7 flex items-center justify-center">
-                <div className="flex items-center gap-3 rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-5 py-3 text-sm text-[#D6F3FF]/65">
+              <div className="mt-5 flex items-center justify-center">
+                <div className="flex items-center gap-2 rounded-full border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-2 text-xs text-[#D6F3FF]/65">
                   <SparklesIcon className="h-4 w-4" />
                   Role para continuar explorando
                 </div>
@@ -396,14 +396,14 @@ function KodaSynExperienceSection() {
               transition={{ duration: 1.1, delay: 0.35 }}
               className="absolute"
             >
-              <div className="h-[220px] w-[220px] rounded-full bg-[#1193E6]/[0.05] blur-[70px]" />
+              <div className="h-[160px] w-[160px] rounded-full bg-[#1193E6]/[0.05] blur-[60px]" />
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.1, delay: 0.45 }}
-              className="absolute bottom-[14%] right-[12%] hidden rounded-[26px] border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-5 py-4 backdrop-blur-md lg:block"
+              className="absolute bottom-[14%] right-[8%] hidden rounded-[18px] border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-3 backdrop-blur-md 2xl:block"
               style={{
                 boxShadow:
                   "0 0 30px rgba(17,147,230,0.06), inset 0 0 15px rgba(17,147,230,0.03)",
@@ -426,7 +426,7 @@ function KodaSynExperienceSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.1, delay: 0.55 }}
-              className="absolute left-[10%] top-[20%] hidden rounded-[26px] border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-5 py-4 backdrop-blur-md lg:block"
+              className="absolute left-[8%] top-[20%] hidden rounded-[18px] border border-[#1193E6]/14 bg-[#1193E6]/[0.05] px-4 py-3 backdrop-blur-md 2xl:block"
               style={{
                 boxShadow:
                   "0 0 30px rgba(17,147,230,0.06), inset 0 0 15px rgba(17,147,230,0.03)",

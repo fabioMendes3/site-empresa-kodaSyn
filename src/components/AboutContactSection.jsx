@@ -148,7 +148,7 @@ function ContactSection() {
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[82px] w-[164px] object-contain md:h-[132px] md:w-[264px] xl:h-[150px] xl:w-[300px]"
+          className="h-[70px] w-[140px] object-contain md:h-[96px] md:w-[192px] xl:h-[108px] xl:w-[216px]"
           draggable={false}
         />
       </div>
@@ -161,7 +161,7 @@ function ContactSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,183,243,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,183,243,0.04)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-4 pb-4 pt-14 md:px-8 md:pb-6 md:pt-[4.5rem]">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl flex-col px-4 pb-4 pt-12 md:px-8 md:pb-5 md:pt-14">
         <div className="flex-1">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -170,11 +170,11 @@ function ContactSection() {
             transition={{ duration: 0.65 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-[9px] uppercase tracking-[0.24em] text-cyan-200/80 md:px-4 md:py-2 md:text-[10px] md:tracking-[0.32em]">
+            <span className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-cyan-200/80 md:text-[10px]">
               contato
             </span>
 
-            <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:mt-4 md:text-[2.6rem] xl:text-[3rem]">
+            <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:mt-3 md:text-[2.15rem] xl:text-[2.45rem]">
               fale com a KodaSyn
               <span className="block text-cyan-200/80">
                 e tire seu projeto do papel
@@ -182,13 +182,13 @@ function ContactSection() {
             </h2>
           </motion.div>
 
-          <div className="mt-4 grid gap-4 lg:grid-cols-[0.74fr_1.26fr] md:mt-6">
+          <div className="mt-4 grid gap-4 xl:grid-cols-[0.7fr_1.3fr] md:mt-5">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="relative hidden overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.05] p-5 backdrop-blur-xl md:p-6 lg:block"
+              className="relative hidden overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.05] p-4 backdrop-blur-xl xl:block"
               style={{
                 boxShadow:
                   "0 0 44px rgba(17,147,230,0.10), inset 0 0 24px rgba(255,255,255,0.03)",
@@ -201,15 +201,15 @@ function ContactSection() {
                   <p className="text-[11px] uppercase tracking-[0.28em] text-cyan-200/55">
                     contatos
                   </p>
-                  <h3 className="mt-2 text-[1.5rem] font-semibold text-white md:text-[1.75rem]">
+                  <h3 className="mt-2 text-[1.35rem] font-semibold text-white">
                     fale pelos canais abaixo
                   </h3>
-                  <p className="mt-3 max-w-md text-sm leading-6 text-white/68">
+                  <p className="mt-2 max-w-md text-sm leading-6 text-white/68">
                     Contato direto para briefing, proposta e alinhamento inicial.
                   </p>
                 </div>
 
-                <div className="mt-5 space-y-3">
+                <div className="mt-4 space-y-2.5">
                   {contactItems.map((item) => (
                     <div key={item.label} className="border-b border-white/10 pb-3">
                       <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">
@@ -226,12 +226,12 @@ function ContactSection() {
                               ? "noreferrer"
                               : undefined
                           }
-                          className="mt-1.5 block text-base font-medium text-white transition hover:text-cyan-200 md:text-lg"
+                          className="mt-1 block text-sm font-medium text-white transition hover:text-cyan-200"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="mt-1.5 text-base font-medium text-white md:text-lg">
+                        <p className="mt-1 text-sm font-medium text-white">
                           {item.value}
                         </p>
                       )}
@@ -239,7 +239,7 @@ function ContactSection() {
                   ))}
                 </div>
 
-                <div className="mt-5">
+                <div className="mt-4">
                   <p className="text-[11px] uppercase tracking-[0.24em] text-cyan-200/55">
                     redes sociais
                   </p>
@@ -304,7 +304,7 @@ function ContactSection() {
                 </a>
               </div>
 
-              <form onSubmit={handleSubmit} className="relative z-10 mt-3 space-y-3 md:mt-5 md:space-y-4">
+              <form onSubmit={handleSubmit} className="relative z-10 mt-3 space-y-3 md:mt-4">
                 <div className="grid gap-3 md:grid-cols-2 md:gap-4">
                   <label className="block">
                     <span className="mb-1.5 block text-xs text-white/65 md:mb-2 md:text-sm">Nome</span>
@@ -314,7 +314,7 @@ function ContactSection() {
                       value={formData.from_name}
                       onChange={handleChange}
                       placeholder="Seu nome"
-                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-12 md:rounded-2xl md:px-4 md:text-base"
+                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-11 md:px-4"
                     />
                   </label>
 
@@ -326,7 +326,7 @@ function ContactSection() {
                       value={formData.from_email}
                       onChange={handleChange}
                       placeholder="seuemail@dominio.com"
-                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-12 md:rounded-2xl md:px-4 md:text-base"
+                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-11 md:px-4"
                     />
                   </label>
                 </div>
@@ -341,14 +341,14 @@ function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Explique seu projeto, objetivo, prazo ou a ideia principal."
-                    className="min-h-[86px] w-full resize-none rounded-[8px] border border-white/10 bg-white px-3 py-2.5 text-sm leading-5 text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:min-h-[132px] md:rounded-[26px] md:px-4 md:py-3.5 md:text-base md:leading-7"
+                    className="min-h-[82px] w-full resize-none rounded-[8px] border border-white/10 bg-white px-3 py-2.5 text-sm leading-5 text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:min-h-[104px] md:px-4 md:py-3 md:leading-6"
                     style={{ whiteSpace: "pre-wrap" }}
                   />
                 </label>
 
                 {feedback.message && (
                   <div
-                    className={`rounded-[8px] border px-3 py-2 text-xs md:rounded-2xl md:px-4 md:py-3 md:text-sm ${
+                    className={`rounded-[8px] border px-3 py-2 text-xs md:px-4 md:text-sm ${
                       feedback.type === "success"
                         ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-300"
                         : "border-red-400/20 bg-red-400/10 text-red-300"
@@ -366,7 +366,7 @@ function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSending}
-                    className="inline-flex h-11 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-500 px-5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-70 md:h-12 md:px-7 md:text-sm md:tracking-[0.14em]"
+                    className="inline-flex h-10 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-500 px-5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-70 md:h-11 md:px-6"
                   >
                     {isSending ? "Enviando..." : "Enviar mensagem"}
                   </button>

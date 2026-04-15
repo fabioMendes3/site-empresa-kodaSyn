@@ -199,7 +199,7 @@ function App() {
               </div>
             )}
 
-            <div className="absolute bottom-5 right-4 top-auto z-50 md:bottom-auto md:right-6 md:top-24 xl:right-8 xl:top-28">
+            <div className="absolute bottom-5 right-4 top-auto z-50 md:bottom-auto md:right-4 md:top-20 xl:right-6 xl:top-24">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`circlemenu-${activeSection}`}
@@ -234,7 +234,9 @@ function App() {
                   }}
                   className="absolute inset-0 h-full w-full"
                 >
-                  {sections[activeSection].component}
+                  <div className="desktop-section-fit h-full w-full">
+                    {sections[activeSection].component}
+                  </div>
                 </motion.section>
               </AnimatePresence>
 
