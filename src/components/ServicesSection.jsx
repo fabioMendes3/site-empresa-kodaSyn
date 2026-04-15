@@ -81,7 +81,7 @@ function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative h-screen overflow-hidden bg-black pt-12 md:pt-16"
+      className="relative h-full overflow-hidden bg-black pt-12 md:pt-16"
     >
       <div className="absolute inset-0 bg-black" />
 

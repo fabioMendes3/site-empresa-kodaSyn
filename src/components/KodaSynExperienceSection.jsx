@@ -204,7 +204,7 @@ function KodaSynExperienceSection() {
     <section
       id="experience"
       onMouseMove={handleMouseMove}
-      className="relative h-screen overflow-hidden bg-black pt-14 md:pt-16"
+      className="relative h-full overflow-hidden bg-black pt-14 md:pt-16"
     >
       <div className="absolute inset-0 bg-black" />
 

@@ -6,7 +6,7 @@ function HeroSection({ onNavigate }) {
   return (
     <section
       id="home"
-      className="relative h-screen overflow-hidden bg-black pt-16 md:pt-20"
+      className="relative h-full overflow-hidden bg-black pt-16 md:pt-20"
     >
       <AnimatedBackground />
 
