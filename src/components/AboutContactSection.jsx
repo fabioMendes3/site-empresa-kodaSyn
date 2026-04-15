@@ -4,9 +4,9 @@ import emailjs from "@emailjs/browser";
 import logoMasc from "../assets/log+masc.png";
 
 const emailJsConfig = {
-  serviceId: "",
-  templateId: "",
-  publicKey: "Z",
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
 const contactItems = [
@@ -84,14 +84,14 @@ function ContactSection() {
     }
 
     if (
-      emailJsConfig.serviceId === "SEU_SERVICE_ID" ||
-      emailJsConfig.templateId === "SEU_TEMPLATE_ID" ||
-      emailJsConfig.publicKey === "SUA_PUBLIC_KEY"
+      !emailJsConfig.serviceId ||
+      !emailJsConfig.templateId ||
+      !emailJsConfig.publicKey
     ) {
       setFeedback({
         type: "error",
         message:
-          "EmailJS nao esta configurado. Preencha serviceId, templateId e publicKey no codigo.",
+          "EmailJS nao esta configurado. Preencha as variaveis VITE_EMAILJS_* no arquivo .env.",
       });
       return;
     }
@@ -144,11 +144,11 @@ function ContactSection() {
       id="contact"
       className="relative h-full overflow-hidden bg-[#02070c] text-white"
     >
-      <div className="absolute left-6 top-6 z-30 md:left-8 md:top-8">
+      <div className="absolute left-3 top-3 z-30 md:left-8 md:top-8">
         <img
           src={logoMasc}
           alt="KodaSyn"
-          className="h-[200px] w-[400px] object-contain"
+          className="h-[82px] w-[164px] object-contain md:h-[200px] md:w-[400px]"
           draggable={false}
         />
       </div>
@@ -161,7 +161,7 @@ function ContactSection() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,183,243,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,183,243,0.04)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-6 pb-5 pt-16 md:px-8 md:pb-6 md:pt-20">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col px-4 pb-4 pt-14 md:px-8 md:pb-6 md:pt-20">
         <div className="flex-1">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -170,11 +170,11 @@ function ContactSection() {
             transition={{ duration: 0.65 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-[10px] uppercase tracking-[0.32em] text-cyan-200/80">
+            <span className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-[9px] uppercase tracking-[0.24em] text-cyan-200/80 md:px-4 md:py-2 md:text-[10px] md:tracking-[0.32em]">
               contato
             </span>
 
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-white md:text-[3.2rem]">
+            <h2 className="mt-2 text-2xl font-semibold leading-tight text-white sm:text-3xl md:mt-4 md:text-[3.2rem]">
               fale com a KodaSyn
               <span className="block text-cyan-200/80">
                 e tire seu projeto do papel
@@ -182,13 +182,13 @@ function ContactSection() {
             </h2>
           </motion.div>
 
-          <div className="mt-7 grid gap-4 xl:grid-cols-[0.78fr_1.22fr]">
+          <div className="mt-4 grid gap-4 lg:grid-cols-[0.78fr_1.22fr] md:mt-7">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.05] p-5 backdrop-blur-xl md:p-6"
+              className="relative hidden overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.05] p-5 backdrop-blur-xl md:p-6 lg:block"
               style={{
                 boxShadow:
                   "0 0 44px rgba(17,147,230,0.10), inset 0 0 24px rgba(255,255,255,0.03)",
@@ -266,7 +266,7 @@ function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative overflow-hidden rounded-[28px] border border-cyan-400/12 bg-[#07131d]/80 p-5 backdrop-blur-xl md:p-6"
+              className="relative overflow-hidden rounded-[18px] border border-cyan-400/12 bg-[#07131d]/80 p-4 backdrop-blur-xl md:rounded-[28px] md:p-6"
               style={{
                 boxShadow:
                   "0 0 52px rgba(17,147,230,0.12), inset 0 0 28px rgba(17,147,230,0.05)",
@@ -275,63 +275,80 @@ function ContactSection() {
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/40 to-transparent" />
 
               <div className="relative z-10">
-                <p className="text-[11px] uppercase tracking-[0.28em] text-cyan-200/55">
+                <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-200/55 md:text-[11px] md:tracking-[0.28em]">
                   mensagem
                 </p>
-                <h3 className="mt-2 text-[1.5rem] font-semibold text-white md:text-[1.75rem]">
+                <h3 className="mt-1.5 text-[1.35rem] font-semibold text-white md:mt-2 md:text-[1.75rem]">
                   descreva o que voce precisa
                 </h3>
-                <p className="mt-2 max-w-xl text-sm leading-6 text-white/62">
+                <p className="mt-1.5 hidden max-w-xl text-sm leading-6 text-white/62 sm:block md:mt-2">
                   Use o formulario para passar o contexto inicial. Quanto mais
                   claro o briefing, mais objetiva sera a conversa seguinte.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="relative z-10 mt-5 space-y-4">
-                <div className="grid gap-4 md:grid-cols-2">
+              <div className="relative z-10 mt-3 grid grid-cols-2 gap-2 text-[11px] sm:hidden">
+                <a
+                  href="mailto:contato@kodasyn.com"
+                  className="rounded-[8px] border border-white/10 bg-white/[0.04] px-3 py-2 text-white/75"
+                >
+                  Email
+                </a>
+                <a
+                  href="https://wa.me/5541988894130"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-[8px] border border-white/10 bg-white/[0.04] px-3 py-2 text-white/75"
+                >
+                  WhatsApp
+                </a>
+              </div>
+
+              <form onSubmit={handleSubmit} className="relative z-10 mt-3 space-y-3 md:mt-5 md:space-y-4">
+                <div className="grid gap-3 md:grid-cols-2 md:gap-4">
                   <label className="block">
-                    <span className="mb-2 block text-sm text-white/65">Nome</span>
+                    <span className="mb-1.5 block text-xs text-white/65 md:mb-2 md:text-sm">Nome</span>
                     <input
                       type="text"
                       name="from_name"
                       value={formData.from_name}
                       onChange={handleChange}
                       placeholder="Seu nome"
-                      className="h-12 w-full rounded-2xl border border-white/10 bg-white px-4 text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40"
+                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-12 md:rounded-2xl md:px-4 md:text-base"
                     />
                   </label>
 
                   <label className="block">
-                    <span className="mb-2 block text-sm text-white/65">Email</span>
+                    <span className="mb-1.5 block text-xs text-white/65 md:mb-2 md:text-sm">Email</span>
                     <input
                       type="email"
                       name="from_email"
                       value={formData.from_email}
                       onChange={handleChange}
                       placeholder="seuemail@dominio.com"
-                      className="h-12 w-full rounded-2xl border border-white/10 bg-white px-4 text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40"
+                      className="h-10 w-full rounded-[8px] border border-white/10 bg-white px-3 text-sm text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:h-12 md:rounded-2xl md:px-4 md:text-base"
                     />
                   </label>
                 </div>
 
                 <label className="block">
-                  <span className="mb-2 block text-sm text-white/65">
+                  <span className="mb-1.5 block text-xs text-white/65 md:mb-2 md:text-sm">
                     Mensagem
                   </span>
                   <textarea
                     name="message"
-                    rows={5}
+                    rows={3}
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Explique seu projeto, objetivo, prazo ou a ideia principal."
-                    className="min-h-[132px] w-full resize-none rounded-[26px] border border-white/10 bg-white px-4 py-3.5 text-black leading-7 outline-none transition placeholder:text-black/45 focus:border-cyan-400/40"
+                    className="min-h-[86px] w-full resize-none rounded-[8px] border border-white/10 bg-white px-3 py-2.5 text-sm leading-5 text-black outline-none transition placeholder:text-black/45 focus:border-cyan-400/40 md:min-h-[132px] md:rounded-[26px] md:px-4 md:py-3.5 md:text-base md:leading-7"
                     style={{ whiteSpace: "pre-wrap" }}
                   />
                 </label>
 
                 {feedback.message && (
                   <div
-                    className={`rounded-2xl border px-4 py-3 text-sm ${
+                    className={`rounded-[8px] border px-3 py-2 text-xs md:rounded-2xl md:px-4 md:py-3 md:text-sm ${
                       feedback.type === "success"
                         ? "border-emerald-400/20 bg-emerald-400/10 text-emerald-300"
                         : "border-red-400/20 bg-red-400/10 text-red-300"
@@ -342,14 +359,14 @@ function ContactSection() {
                 )}
 
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-sm text-[11px] uppercase tracking-[0.16em] text-white/38">
+                  <p className="hidden max-w-sm text-[11px] uppercase tracking-[0.16em] text-white/38 sm:block">
                     retorno com foco em clareza, prazo e direcionamento
                   </p>
 
                   <button
                     type="submit"
                     disabled={isSending}
-                    className="inline-flex h-12 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-500 px-7 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-70"
+                    className="inline-flex h-11 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-500 px-5 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-70 md:h-12 md:px-7 md:text-sm md:tracking-[0.14em]"
                   >
                     {isSending ? "Enviando..." : "Enviar mensagem"}
                   </button>
@@ -359,7 +376,7 @@ function ContactSection() {
           </div>
         </div>
 
-        <footer className="mt-4 border-t border-white/10 pt-3">
+        <footer className="mt-4 hidden border-t border-white/10 pt-3 md:block">
           <div className="flex flex-col gap-4 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
             <p>&copy; {new Date().getFullYear()} KodaSyn. Todos os direitos reservados.</p>
 

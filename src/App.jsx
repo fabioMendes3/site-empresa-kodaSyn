@@ -199,7 +199,7 @@ function App() {
               </div>
             )}
 
-            <div className="absolute right-8 top-28 z-50">
+            <div className="absolute bottom-5 right-4 top-auto z-50 md:bottom-auto md:right-8 md:top-28">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`circlemenu-${activeSection}`}
@@ -216,6 +216,10 @@ function App() {
                 </motion.div>
               </AnimatePresence>
             </div>
+
+            <p className="pointer-events-none absolute bottom-5 left-4 z-50 max-w-[178px] text-left text-[10px] font-medium uppercase leading-4 tracking-[0.12em] text-white/45 md:hidden">
+              Para melhor experiencia do site usar modo desktop
+            </p>
 
             <main className="relative h-screen w-full overflow-hidden">
               <AnimatePresence mode="wait">
@@ -234,7 +238,7 @@ function App() {
                 </motion.section>
               </AnimatePresence>
 
-              <div className="pointer-events-none absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3">
+              <div className="pointer-events-none absolute bottom-6 left-1/2 z-50 hidden -translate-x-1/2 items-center gap-3 md:flex">
                 {sections.map((section, index) => (
                   <span
                     key={section.id}
